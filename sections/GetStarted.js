@@ -24,7 +24,9 @@ const GetStarted = () => (
                 <TitleText title={<>Why Glowsine Facewash?</>} />
                 <div className='mt-[31px] flex flex-col max-w-[370px] gap-[24px]'>
                     {startingFeatures.map((feature, index) => (
-                        <StartSteps key={feature} number={`${index < 10 ? "0" : ""} ${index + 1}`} text={feature} />
+                        <div className='mobile:mb-6' key={feature}>
+                            <StartSteps number={`${index < 10 ? "0" : ""} ${index + 1}`} text={feature} />
+                        </div>
                     ))}
                 </div>
             </motion.div>
